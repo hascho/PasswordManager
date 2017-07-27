@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_secNotes"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <EditText
+            android:id ="@+id/edtInput_racksoup"
+            android:layout_width ="368dp"
+            android:layout_height ="wrap_content"
+            android:layout_weight ="1"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines ="10"
+            android:maxLength ="2000"
+            android:hint ="@string/hint_secure_note"
+            android:scrollHorizontally="false" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

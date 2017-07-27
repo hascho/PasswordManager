@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<menu xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+    <!--<group android:checkableBehavior="single">-->
+        <!--<item-->
+            <!--android:id="@+id/nav_secure_notes"-->
+            <!--android:icon="@drawable/ic_menu_camera"-->
+            <!--android:title="@string/nav_secure_notes" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_logins"-->
+            <!--android:icon="@drawable/ic_menu_gallery"-->
+            <!--android:title="@string/nav_logins" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_pass_gen"-->
+            <!--android:icon="@drawable/ic_menu_slideshow"-->
+            <!--android:title="@string/nav_pass_gen" />-->
+    <!--</group>-->
+
+    <!--<group android:checkableBehavior="single">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_settings"-->
+                <!--android:icon="@drawable/ic_settings_black_24dp"-->
+                <!--android:title="@string/nav_settings" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_logout"-->
+                <!--android:icon="@drawable/ic_power_settings_new_black_24dp"-->
+                <!--android:title="@string/nav_logout" />-->
+        <!--</menu>-->
+    <!--</group>-->
+
+<!--</menu>-->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/nav_group_one"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_secure_notes"
+            android:icon="@drawable/ic_note_black_24dp"
+            android:title="@string/nav_secure_notes" />
+        <item
+            android:id="@+id/nav_logins"
+            android:icon="@drawable/ic_person_outline_black_24dp"
+            android:title="@string/nav_logins" />
+        <item
+            android:id="@+id/nav_pass_gen"
+            android:icon="@drawable/ic_vpn_key_black_24dp"
+            android:title="@string/nav_pass_gen" />
+
+    </group>
+
+    <group
+        android:id="@+id/nav_group_two"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="@string/nav_settings" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_power_settings_new_black_24dp"
+            android:title="@string/nav_logout" />
+
+    </group>
+
+</menu>

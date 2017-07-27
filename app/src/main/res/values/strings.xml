@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">PasswordManager</string>
+    <string name="title_activity_main2">MainActivity2</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--MainActivity-->
+    <string name="text_no_data">No Data</string>
+
+    <!--actionbar menu-->
+    <string name="action_search">Search</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">Logout</string>
+
+    <!-- Menu items -->
+    <string name="nav_secure_notes">Secure Notes</string>
+    <string name="nav_logins">Logins</string>
+    <string name="nav_pass_gen">Password Generator</string>
+    <string name="nav_logout">Logout</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Passwd Generator Dialog -->
+    <string name="passGenDlgTitle">Generate Password</string>
+    <string name="refresh_button_description">Generates and displays a new random password with chosen options to textview</string>
+    <string name="copy_button_description">Copy button to copy generated password to clipboard</string>
+    <string name="dialog_close">Close</string>
+    <string name="dialog_settings">Settings</string>
+    <string name="dialog_save">Save</string>
+    <string name="dlg_pass_len">Password Length:</string>
+    <string name="more_options_title">More options</string>
+    <string name="hidden_settings_chkbx1">a-z</string>
+    <string name="hidden_settings_chkbx2">A-Z</string>
+    <string name="hidden_settings_chkbx3">0-9</string>
+    <string name="hidden_settings_SBTitle">Minimum Numberic Characters:</string>
+    <string name="hidden_settings_chkbx4">Special</string>
+
+    <!-- Login registration -->
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Name</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="btn_link_to_register">Dont have an account? Sign up now!</string>
+    <string name="btn_link_to_login">Already registered! Login now!</string>
+
+    <!--Settings-->
+    <string name="btn_chg_pass">Change Password</string>
+    <string name="btn_logout">Logout</string>
+    <string name="hint_old_password">Old Password</string>
+    <string name="hint_new_pass">New Password</string>
+    <string name="btn_import_db">Import Database</string>
+    <string name="btn_export_db">Export Database</string>
+
+    <!--Fab Menu-->
+    <string name="fab_login">Login</string>
+    <string name="fab_note">Note</string>
+
+    <!--Entry Info-->
+    <string name="tv_name">Name</string>
+    <string name="tv_description">Description</string>
+    <string name="tv_website">Website</string>
+    <string name="tv_login">Login</string>
+    <string name="tv_password">Password</string>
+    <string name="tv_modified">Modified</string>
+    <string name="hint_name_entry">Enter Name</string>
+    <string name="hint_description_entry">Enter Description</string>
+    <string name="hint_website_entry">www.example.com</string>
+    <string name="hint_email_entry">example@example.com</string>
+    <string name="hint_password_entry">mypasswordhere</string>
+
+    <!--Secure Note-->
+    <string name="hint_secure_note">Add Secure Note Here</string>
+    <string name="tv_secNotes">Secure Note</string>
+    <string name="tv_secNoteTitle">Name</string>
+    <string name="hint_secNote_name_entry">Add Name Here</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="example.passwordmanager.ShowSecureNoteActivity">
+
+
+    <TextView
+        android:id ="@+id/tv_secureNoteTitle"
+        android:layout_width ="match_parent"
+        android:layout_height ="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="Secure Note"/>
+
+    <TextView
+        android:id ="@+id/tv_secureNote"
+        android:layout_width ="match_parent"
+        android:layout_height ="match_parent"
+        android:layout_marginTop="5dp"
+        android:textSize="18dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum maximus massa at gravida. Sed nec lacus eget enim aliquam pulvinar. Donec gravida odio vitae mi ultrices fringilla. Integer nec urna vitae nibh lobortis convallis at in orci. Phasellus non erat turpis. Maecenas sed pharetra sem. Phasellus eget tellus eu eros maximus aliquet eget sit amet nisi."/>
+
+</LinearLayout>
