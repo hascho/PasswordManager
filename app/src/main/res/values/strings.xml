@@ -69,6 +69,22 @@
     <string name="hint_email_entry">example@example.com</string>
     <string name="hint_password_entry">mypasswordhere</string>
 
+    <string name="form_hint_name">Enter name (required)</string>
+    <string name="form_hint_description">Enter description (optional)</string>
+    <string name="error_name_min_characters">At least %1$d characters</string>
+
+    <string name="category_prompt">Choose a category</string>
+
+    <string-array name="category_array">
+        <item>Login</item>
+        <item>Note</item>
+    </string-array>
+
+    <!--Login Credentials-->
+    <string name="hint_login_credentials_website_entry">Add Website URL Here</string>
+    <string name="hint_login_credentials_username_entry">Add Username Here</string>
+    <string name="hint_login_credentials_password_entry">Add Password Here</string>
+
     <!--Secure Note-->
     <string name="hint_secure_note">Add Secure Note Here</string>
     <string name="tv_secNotes">Secure Note</string>

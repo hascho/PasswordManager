@@ -31,7 +31,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class MainActivity2
@@ -255,16 +254,23 @@ public class MainActivity2
     @Override
     public void onClick(View v)
     {
+        Intent i;
         switch (v.getId())
         {
             case R.id.fab1:
                 // add secure login
-                startActivity(new Intent(MainActivity2.this, AddNewCredentialActivity.class));
+                //startActivity(new Intent(MainActivity2.this, AddNewListEntryActivity.class));
+                i = new Intent(MainActivity2.this, AddNewListEntryActivity.class);
+                i.putExtra("Category", ListEntry.LOGIN_CREDENTIALS);
+                startActivity(i);
                 break;
 
             case R.id.fab2:
                 // add secure note
-                startActivity(new Intent(MainActivity2.this, AddNewSecureNoteActivity.class));
+                //startActivity(new Intent(MainActivity2.this, AddNewSecureNoteActivity.class));
+                i = new Intent(MainActivity2.this, AddNewListEntryActivity.class);
+                i.putExtra("Category", ListEntry.SECURE_NOTE);
+                startActivity(i);
                 //startActivity(new Intent(MainActivity2.this, ShowSecureNoteActivity.class));
                 break;
         }

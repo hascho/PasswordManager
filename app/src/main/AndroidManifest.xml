@@ -52,7 +52,7 @@
             android:name=".EntryInfoActivity"
             android:label="Example" />
         <activity android:name=".AddNewSecureNoteActivity" />
-        <activity android:name=".AddNewCredentialActivity" />
+        <activity android:name=".AddNewListEntryActivity" />
         <activity android:name=".ShowSecureNoteActivity"></activity>
     </application>
 

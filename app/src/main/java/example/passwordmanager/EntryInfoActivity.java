@@ -3,6 +3,7 @@ package example.passwordmanager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
@@ -73,28 +74,41 @@ public class EntryInfoActivity extends AppCompatActivity
         edit.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                switch(category)
+//                switch(category)
+//                {
+//                    case ListEntry.LOGIN_CREDENTIALS:
+//                        if (isChecked)
+//                        {
+//                            for (int i = 0; i < editTextList.size(); i++)
+//                                setEditable(editTextList.get(i), true);
+//
+//                            //password.requestFocus();
+//                            editTextList.get(2).requestFocus();
+//                        }
+//                        else
+//                        {
+//                            for (int i = 0; i < editTextList.size(); i++)
+//                                setEditable(editTextList.get(i), false);
+//                        }
+//                        break;
+//
+//                    case ListEntry.SECURE_NOTE:
+//                        break;
+//                }
+
+                if (isChecked)
                 {
-                    case ListEntry.LOGIN_CREDENTIALS:
-                        if (isChecked)
-                        {
-                            for (int i = 0; i < editTextList.size(); i++)
-                                setEditable(editTextList.get(i), true);
+                    for (int i = 0; i < editTextList.size(); i++)
+                        setEditable(editTextList.get(i), true);
 
-                            //password.requestFocus();
-                            editTextList.get(2).requestFocus();
-                        }
-                        else
-                        {
-                            for (int i = 0; i < editTextList.size(); i++)
-                                setEditable(editTextList.get(i), false);
-                        }
-                        break;
-
-                    case ListEntry.SECURE_NOTE:
-                        break;
+                    //password.requestFocus();
+                    //editTextList.get(2).requestFocus();
                 }
-
+                else
+                {
+                    for (int i = 0; i < editTextList.size(); i++)
+                        setEditable(editTextList.get(i), false);
+                }
             }
         });
 
@@ -112,13 +126,14 @@ public class EntryInfoActivity extends AppCompatActivity
 
     }
 
-    private void addEdtsToList(ViewGroup parent) {
+    private void addEdtsToList(ViewGroup parent, boolean visibleHeadings)
+    {
         for (int i = parent.getChildCount() - 1; i >= 0; i--)
         {
             final View child = parent.getChildAt(i);
             if (child instanceof ViewGroup)
             {
-                addEdtsToList((ViewGroup) child);
+                addEdtsToList((ViewGroup) child, visibleHeadings);
                 // DO SOMETHING WITH VIEWGROUP, AFTER CHILDREN HAS BEEN LOOPED
             }
             else
@@ -128,9 +143,12 @@ public class EntryInfoActivity extends AppCompatActivity
                     // DO SOMETHING WITH VIEW
                     if (parent.getChildAt(i) instanceof EditText)
                         editTextList.add((EditText) parent.getChildAt(i));
+                    else if (!visibleHeadings && parent.getChildAt(i) instanceof TextView)
+                        parent.getChildAt(i).setVisibility(View.GONE);
                 }
             }
         }
+        Collections.reverse(editTextList);
     }
 
     private List<String> getDataBetweenQuotes()
@@ -167,12 +185,14 @@ public class EntryInfoActivity extends AppCompatActivity
                 break;
         }
 
-        addEdtsToList((ViewGroup) v);
-        Collections.reverse(editTextList);
+        addEdtsToList((ViewGroup) v, true);
 
         List<String> parts = getDataBetweenQuotes();
         for (int i = 0; i < editTextList.size(); i++)
+        {
             editTextList.get(i).setText(parts.get(i));
+            setEditable(editTextList.get(i), false);
+        }
 
         edit = (Switch) findViewById(R.id.switch_edit);
         save = (Button) findViewById(R.id.btn_save);
